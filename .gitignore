@@ -1,0 +1,14 @@
+.idea
+.ipynb_checkpoints
+.mypy_cache
+.vscode
+__pycache__
+.env
+venv
+# vim temporary files
+__pycache__
+__pycache__/main.cpython-38.pyc
+
+*ipynb
+
+db.sqlite3

@@ -1,0 +1,12 @@
+<!-- base.html (optional for extension) -->
+<html>
+<body>
+{% if user.is_authenticated %}
+    Hello {{ user.username }} | <a href="{% url 'logout' %}">Logout</a>
+{% else %}
+    <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+<hr>
+{% block content %}{% endblock %}
+</body>
+</html>

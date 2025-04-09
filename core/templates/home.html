@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Questions</h2>
+<a href="{% url 'ask_question' %}"><button>Ask a Question</button></a>
+{% for question in questions %}
+    <div>
+        <h3><a href="{% url 'question_detail' question.id %}">{{ question.title }}</a></h3>
+        <p>{{ question.body }}</p>
+        <small>Asked by {{ question.author.username }}</small>
+    </div>
+{% empty %}
+    <p>No questions yet.</p>
+{% endfor %}
+{% endblock %}
